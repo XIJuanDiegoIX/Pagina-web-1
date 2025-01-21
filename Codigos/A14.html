@@ -1,0 +1,102 @@
+<!doctype= html>
+
+<html lang="es">
+	<!--www.w3schools.com-->
+	<head>
+		<meta charset="utf-8">
+		<title>Formularios</title> 
+		<script>
+
+			function envia(){
+				var nombre = document.forma01.nombre.value;
+				var correo = document.forma01.correo.value;
+				var sexo = document.forma01.sexo.value;
+				var carrera = document.forma01.carrera.value;
+				var pass = document.forma01.pass.value;
+				var promedio = document.forma01.promedio.value;
+				var fecha = document.forma01.fecha.value;
+				if(nombre == "" || correo == "" || correo == "@udg.mx" || sexo=="" || pass == "" || carrera == 0 || promedio == "" || fecha == ""){
+					alert('Faltan campos por llenar');
+					console.log('Nombre:'+nombre);
+					console.log('Correo:'+correo);
+					console.log('sexo:'+sexo);
+					console.log('carrera:'+carrera);
+					console.log('pass:'+pass);
+					console.log('promedio'+promedio);
+					console.log('fecha'+fecha);
+					return false;
+				}else{
+					var comentario = document.forma01.comentario.value;
+					if(sexo == 'F'){var sex = 'Femenino';}
+					else{var sex = 'Masculino';}
+					if(comentario == ""){var com = 'Usted no ingreso comentarios';}
+					else{var com = comentario}
+					if(carrera == 1){var car = 'Ingenieria Informática';}
+					else{var car = 'Ingenieria en Computacion';}
+					//alert('Bienvenido: '+nombre+'('+correo+')\n Genero: '+sex+'\n Estudiante de: '+car+'\n Contraseña: '+pass+'\n Promedio: '+promedio+'\n Fecha de nacimiento: '+fecha+'\n Comentarios: '+com);
+				}
+			}
+			
+			
+		</script>
+		
+	</head>
+
+	<body>
+		<!--Metodos:
+		-post no muestra datos extra
+		-get muestra los datos a enviar en el url
+		-->
+		<form name="forma01" method="post" action="../PHP/A14.php">
+			<label>
+				Nombre:
+				<input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre"/> <br> <!--<br> es un salto de linea-->
+			</label>
+			<label>
+				Correo:
+				<input type="email" name="correo" id="correo" placeholder="Ingresa tu correo" value="@udg.mx"/> <br> <!--<br> es un salto de linea-->
+			</label>
+			<label for="sexo">
+				Genero:
+				<input type="radio" name="sexo" value="F">Femenino
+				<input type="radio" name="sexo" value="M">Masculino
+				<br>
+			</label>
+			<label for="boletin">
+						<input type="checkbox" name="boletin" value="1" checked>
+						Recibir Boletin <br>
+			</label>
+			<label for="comentario">
+				Comentarios:
+				<br>
+				<textarea name="comentario" cols="30" rows="5"></textarea>
+				<br>
+			</label>			
+			<label for="carrera">Carrera:
+				<select name="carrera">
+					<option value="0" selected>Selecciona</option>
+					<option value="1">Ing. Informática</option>
+					<option value="2">Ing. Computación</option>			
+				</select>
+				<br>
+			</label>
+			<label for="pass">
+				Contraseña:
+				<input type="password" name="pass" id="pass" placeholder="Contraseña"/> <br>
+			</label>
+			<label for="promedio">
+				Promedio:
+				<input type="number" name="promedio" min="60" max="100">
+				<br>
+			</label>
+			<label for="fecha">
+				Fecha de Nacimiento:
+				<input type="date" name="fecha">
+				<br>
+			</label>
+			<input onClick="return envia(); " type="submit" value="Ingresar" /> <!--sobmit se asocia en automatico-->
+			<!--En on click se escribe codigo javascript, se puede ejecutar una funcion o lo que sea necesario-->
+		</form>
+	</body>
+	
+</html>

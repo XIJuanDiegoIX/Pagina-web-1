@@ -1,0 +1,75 @@
+<!doctype= html>
+
+<html lang="es">
+	<!--www.w3schools.com-->
+	<head>
+		<meta charset="utf-8">
+		<title>Formularios</title> 
+		
+		<script src="../Librerias/jquery-3.3.1.min.js"></script>
+		
+		<script>
+			
+			//Comntario
+
+			/*Comentario*/
+			
+			function miAlerta(nombre, calificacion){
+				alert('Bienvenido: '+nombre+', Tu calificacion es: '+calificacion); //Se puede usar sin estar en una funcion
+				//El simbolo "+" concatena
+				//F12, herramienta para desarrolladores en navegador
+			}
+			
+			var nombre 			= "Ruben";
+			var apellidos		= 'Maldonado';
+			var calificacion	=  59;
+			
+			//miAlerta(nombre, calificacion);
+			
+			function envia(){
+				var correo = document.forma01.correo.value;
+				var pass = document.forma01.pass.value;
+				var rol = document.forma01.rol.value;
+				if(correo == "" || pass == "" || rol == 0){
+					alert('Faltan campos por llenar');
+					return false;
+				}else{
+					//alert('Campos llenos');
+					
+					document.forma01.method = 'post';
+					document.forma01.action = '../PHP/recibe.php';
+					document.forma01.submit();
+					
+					return true;
+				}
+			}
+			
+			
+		</script>
+		
+	</head>
+
+	<body>
+		<!--Metodos:
+		-post no muestra datos extra
+		-get muestra los datos a enviar en el url
+		-->
+		<form name="forma01" method="post" action="../PHP/recibe.php">
+			<input type="text" name="correo" id="correo" value="@"/> <br> <!--<br> es un salto de linea-->
+			<input type="password" name="pass" id="pass" placeholder="Escribe tu password"/> <br> <!--text guarda todo caracter alfa numerico y especial-->
+			<!--Name, las etiquetas pueden compartir el mismo nombre, id, no puede repetirse
+			ctrl + f5 actualiza y borra cache
+			-->
+			<select name="rol" id="rol">
+				<option value="0">Selecciona</option>
+				<option value="1">Gerente</option>
+				<option value="2">Ejecutivo</option>
+			</select> <br>
+			<input onclick="return envia(); " type="submit" value="Enviar" /> <!--sobmit se asocia en automatico-->
+			<!--En on click se escribe codigo javascript, se puede ejecutar una funcion o lo que sea necesario-->
+			
+			
+		</form>
+	</body>
+	
+</html>

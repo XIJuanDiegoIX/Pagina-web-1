@@ -1,0 +1,37 @@
+.tablamenu{
+	width : 90%;
+	min-width: 560px;
+	background-color: #acdffe;
+	border-radius: 5px;
+	border: 2px solid #000;
+	padding: 8px;
+	display: flex;
+}
+.fondotablamenu{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	margin: 16px;
+	flex:auto;
+}
+.nombreM{
+	color: #fff;  
+	font-size: 20;
+	font-weight:bold;
+	padding: 4px;
+	border-radius: 5px;
+	margin: 3px 2px;
+	width: 40%;
+}
+.botonM{
+	font-size: 20;
+	font-weight:bold;
+	padding: 4px;
+	border-radius: 5px;
+	margin: 3px 2px;
+	width: 12%; 
+}
+.linksM{
+	text-decoration: none;
+	color: #fff;
+}

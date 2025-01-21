@@ -1,0 +1,86 @@
+<!doctype= html>
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+
+		<!--
+		<style> clase1{
+		
+		atributos
+		
+		}
+		</style>
+		-->
+		<!--class="" es una forma de heredar, es decir llamamos nuesra clase y todo lo que tenga esa clase tendra
+		los mismos atributos 
+		definimos la clase:(.clase1{se le puede asignar a muchas etiquetas} o 
+		#clase2{se vincula con la id, es decir se le asigna a una sola etioqueta u objeto}
+		tambien podemos nombrarlos como una etiqueta ejemplo: a todos los (table, img), estos heredaran sus atributos
+		tamble img{a todas las imagenes que esten dentro de tabla}
+		
+		algunos atributos cambian entre html y css, como el bgcolor(html) o bg-color(css)
+		
+		etiqueta "div" estructura informacion, este es mas como un contenedor pra mantener organizados los elementos,
+		es como una forma de juntar objetos y poderlos trabajar y o mover juntos.
+		
+		
+		)
+		
+		-->
+		<style> /*(css)*/
+			#wrap{
+				min-height: 		100%;
+				height: 			auto;
+				margin: 			0 auto -60px 0;
+				padding: 			0 0 60px 0;			
+			}	
+			#tabla{
+				width: 				auto;
+				max-width:			960px;
+				height: 			800px;
+				border: 			1px solid #CCCCCC;
+				background-color: 	#EFEF67;
+				margin-right: 		auto;
+				margin-left: 		auto;
+			}
+			
+			.cajaF{
+				width: 				100%;
+				height: 			80px;
+				background-color: 	#FE8712;
+				margin-bottom: 		10px;
+				float:				left;
+			}
+			
+			.celda{
+				width:				96px;
+				height:				78px;
+				background-color: 	#568967;
+				border:				1px dotted #000000;
+				margin-right:		5px;
+				float:				left;
+				border-radius:     	4px;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div id="tabla">
+				<div class="cajaF" id="cajaF1">
+					<div class="celda">A1</div>
+					<div class="celda">A2</div>
+					<div class="celda">A3</div>
+				</div>
+				<div class="cajaF" id="cajaF2">
+					<div class="celda">B1</div>
+					<div class="celda">B2</div>
+					<div class="celda">B3</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+</html>

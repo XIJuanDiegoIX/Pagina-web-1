@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Tabla con imagenes</title>
+	</head>
+			
+	<script src="../Librerias/jquery-3.3.1.min.js"></script>
+
+	<script>
+		var a;
+		var b;
+		b=0;
+		var c;
+		function del(val){
+			a = confirm("¿Esta seguro que desea eliminar esta linea?");
+			if(a == true){
+				b = b + 1;
+				$('#line'+val).hide();
+			}
+			if(b == 5){
+				c = confirm("Esta pagina esta vacia.\n¿Desea reiniciarla?");
+				if(c == true){
+					location.reload();				
+				}
+			}
+		}
+	</script>
+	
+	<body>
+
+		
+		<table border="1" width="50%" height="260" align="center">
+			<tr width="100%">
+				<td colspan="3" height="50">
+					<h1 align="center" valign="middle" >Tabla con imagenes.
+					</h1>
+				</td>
+			</tr>
+			<tr id="line1">
+				<td width="25%">
+					<a href="https://es.wikipedia.org/wiki/C%2B%2B" target="_blank">
+						<img src="../Fotos/C++.png"width="50%"height="50%"alt=""/>
+					</a>
+				</td>
+				<td>
+					<a href="https://es.wikipedia.org/wiki/C%2B%2B" target="_blank">
+						<h1 align="center">
+							C++
+						</h1>
+					</a>
+				</td>
+				<td>
+					<input type="button" onclick="del(1);" value="Borrar Fila"/>
+				</td>
+			</tr>
+			<tr id="line2">
+				<td width="25%">
+					<a href="https://es.wikipedia.org/wiki/HTML" target="_blank">
+						<img src="../Fotos/HTML.png"width="50%"height="50%"alt=""/>
+					</a>
+				</td>
+				<td>
+					<a href="https://es.wikipedia.org/wiki/HTML" target="_blank">
+						<h1 align="center">
+							HTML
+						</h1>
+					</a>
+				</td>
+				<td>
+					<input type="button" onclick="del(2);" value="Borrar Fila"/>
+				</td>
+			</tr>
+			<tr id="line3">
+				<td width="25%">
+					<a href="https://es.wikipedia.org/wiki/JavaScript" target="_blank">
+						<img src="../Fotos/JavaScript.png"width="50%"height="50%"alt=""/>
+					</a>
+				</td>
+				<td>
+					<a href="https://es.wikipedia.org/wiki/JavaScript" target="_blank">
+						<h1 align="center">
+							JavaScript
+						</h1>
+					</a>
+				</td>
+				<td>
+					<input type="button" onclick="del(3);" value="Borrar Fila"/>
+				</td>
+			</tr>
+			<tr id="line4">
+				<td width="25%">
+					<a href="https://es.wikipedia.org/wiki/Python" target="_blank">
+						<img src="../Fotos/Python.png"width="50%"height="50%"alt=""/>
+					</a>
+				</td>
+				<td>
+					<a href="https://es.wikipedia.org/wiki/Python" target="_blank">
+						<h1 align="center">
+							Python
+						</h1>
+					</a>
+				</td>
+				<td>
+					<input type="button" onclick="del(4);" value="Borrar Fila"/>
+				</td>
+			</tr>
+			<tr id="line5">
+				<td width="25%">				
+					<a href="https://es.wikipedia.org/wiki/World_Wide_Web" target="_blank">
+						<img src="../Fotos/WWW.png"width="50%"height="50%"alt=""/>
+					</a>
+				</td>
+				<td>
+					<a href="https://es.wikipedia.org/wiki/World_Wide_Web" target="_blank">
+						<h1 align="center">
+							World_Wide_Web
+						</h1>
+					</a>				
+				</td>
+				<td>
+					<input type="button" onclick="del(5);" value="Borrar Fila"/>
+				</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>

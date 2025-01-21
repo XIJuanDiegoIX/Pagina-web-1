@@ -1,0 +1,95 @@
+body{
+	/*background: linear-gradient(0deg, #ccc, #ddd, #fff);*/
+	/*background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../Fotos/Oficina.png");
+	background-repeat: no-repeat;
+	background-size: cover;*/
+	font-family: Arial, sans-safir;
+	/*background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));*/
+	background-color: #4e9bf8;
+}
+.fondotabla{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+.txttitle{
+	font-size:26px;
+	color:#ccc;
+	font-weight:bold;
+}
+.borde{
+	margin: 3px 2px;
+	border-radius: 5px;
+}
+.borde1{
+	border: 2px solid #000;
+}
+.tab{
+	display: flex;
+	flex : 1;
+	flex-direction: column;
+	text-align: center;
+	border-radius: 3px;
+}
+.titulos{
+	font-size:32px;
+	color:#006854;
+	font-weight:bold;
+}
+.link{
+	color:#fff;
+	font-weight:bold;
+}
+
+.encabezado	{
+	padding: 6px; 
+	margin: 5;
+	max-height: 10%;
+}
+.encabezado2 {
+	padding: 6px; 
+	margin: 5;
+	max-height: 50%;
+}
+#tabla1{
+	margin: 0 auto;
+	background-color: #acdffe;
+	width: 50%;
+	}
+#tabla1_1{margin: 0 auto 10;}
+.color1{background: linear-gradient(0deg, #740007, #c0000b, #ff0e1b); color: #fff;  font-size: 20;}
+.color2{background: linear-gradient(0deg, #0c2b88, #1241ce, #3e6aee);}
+.color3{background: linear-gradient(0deg, #97020e, #97020e, #e30315); color: #fff;  font-size: 20;}
+.color3:hover{background: linear-gradient(0deg, #902, #f55, #f77);}
+.boton1{
+	width: 25%;
+	padding: 5px;
+	float: right;
+}
+.boton1:hover{
+	padding: 5px;
+	float: right;
+}
+#dist{
+	display: flex;
+	flex: auto;
+	justify-content: space-evenly;
+}
+.img{
+	max-width: 70%;
+	margin: 5px;
+	border-radius: 5px;
+	overflow: hidden;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img1{
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	object-fit: cover;
+}
+#info{ 
+	width: 50%;
+}

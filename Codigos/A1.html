@@ -1,0 +1,44 @@
+<!doctype= html>
+
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Página de tablas</title> 
+	</head>
+
+	<body>
+		<!--
+		Sirve para la creacion de tablas, esta lleva una restriccion en el orden.
+		<tr></tr> sirve para dividir la tabla		
+		<td></td> sirve para dividir la tabla		
+		La prioridad es 1-Table, 2-Tr, 3-Td
+		<table>
+			<tr>
+				<td> 1 </td>
+			</tr>
+		</table>
+		-->
+		<h1>
+			Página de Tablas.
+		</h1>
+		<table align="center" border="1" bgcolor="#FF0000" width="80%" height="800"> <!-- Los atributos width="800" height="960", pueden usarse aqui, en vez de usar numero entero se puede usar %-->
+			<!--bgcolor="" cambia el color del fondo, se puede usar el color(red) o su notacion hexadecimal(#FF0000)-->
+			<!--Los valores hecxadecimal van del 0-9 y despues a-f, es decir 0-F, se usan 6 digitos, los primers corresponden al rojo(r), los siguientes a verde(g), y los ultimos dos azul(b)-->
+			<tr bgcolor="#00FF00">
+				<td align="right" valign="top" bgcolor="#0000FF" width="10%" height="100"> 1 </td>
+				<!--align="" (left,center,right)-->
+				<!--valign="" (top,middle,buttom)-->
+				<td align="center" valign="top"> 2 </td>
+			</tr>
+			<tr>
+				<td align="left" valign="top"> 3 </td>
+				<td align="center" valign="middle"> 4 </td>
+			</tr>
+		</table>
+		<a href="https://es.wikipedia.org/wiki/C%2B%2B" target="_blank">
+			<img src="../Fotos/C++.png"width="200"height="200"alt=""/>
+		</a>
+	</body>
+	
+</html>

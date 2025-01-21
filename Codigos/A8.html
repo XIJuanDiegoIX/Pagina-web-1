@@ -1,0 +1,73 @@
+﻿<!doctype= html>
+
+<html lang="es">
+	<!--www.w3schools.com-->
+	<head>
+		<meta charset="utf-8">
+		<title>Formularios</title> 
+		<script>
+			
+			//Comntario
+
+			/*Comentario*/
+			
+			function miAlerta(nombre, calificacion){
+				alert('Bienvenido: '+nombre+', Tu calificacion es: '+calificacion); //Se puede usar sin estar en una funcion
+				//El simbolo "+" concatena
+				//F12, herramienta para desarrolladores en navegador
+			}
+			
+			var nombre 			= "Ruben";
+			var apellidos		= 'Maldonado';
+			var calificacion	=  59;
+			var correos	= ["alumnos@gmail.com","maestros@gmail.com"];
+			var pass	= ["12345","asdfg"];
+
+			function inSystem(a,b){
+				for(var i=0;i<2;i++){
+					if(a==correos[i] && b==pass[i]){
+						alert('Bienvenido: '+correos[i]+' pass: '+pass[i]);
+						return true;
+					}
+				}	
+				alert('Datos incorrectos');
+				return false;
+			}
+			
+			//miAlerta(nombre, calificacion);
+			
+			function envia(){
+				var correo = document.forma01.correo.value;
+				var pass = document.forma01.pass.value;
+				if(correo == "" || pass == ""){
+					alert('Faltan campos por llenar');
+					return false;
+				}else{
+					return inSystem(correo,pass);
+				}
+			}
+			
+			
+		</script>
+		
+	</head>
+
+	<body>
+		<!--Metodos:
+		-post no muestra datos extra
+		-get muestra los datos a enviar en el url
+		-->
+		<form name="forma01" method="post" > <!--action="../recibe.php"-->
+			<input type="text" name="correo" id="correo" value="@"/> <br> <!--<br> es un salto de linea-->
+			<input type="text" name="pass" id="pass" placeholder="Escribe tu password"/> <br> <!--text guarda todo caracter alfa numerico y especial-->
+			<!--Name, las etiquetas pueden compartir el mismo nombre, id, no puede repetirse
+			ctrl + f5 actualiza y borra cache
+			-->
+			<input onclick="return envia(); " type="submit" value="Enviar" /> <!--sobmit se asocia en automatico-->
+			<!--En on click se escribe codigo javascript, se puede ejecutar una funcion o lo que sea necesario-->
+			
+			
+		</form>
+	</body>
+	
+</html>

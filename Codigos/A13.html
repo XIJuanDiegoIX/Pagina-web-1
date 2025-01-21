@@ -1,0 +1,176 @@
+<!doctype html>
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Tabla con imagenes</title>
+	</head>
+			
+	<script src="../Librerias/jquery-3.3.1.min.js"></script>
+
+	<script>
+		var a;
+		var b;
+		b=0;
+		var c;
+		function del(val){
+			a = confirm("¿Esta seguro que desea eliminar esta linea?");
+			if(a == true){
+				b = b + 1;
+				$('#line'+val).hide();
+			}
+			if(b == 5){
+				c = confirm("Esta pagina esta vacia.\n¿Desea reiniciarla?");
+				if(c == true){
+					location.reload();				
+				}
+			}
+		}
+	</script>
+	
+	<style>
+		.bord{
+			border: 1px solid #000;
+		}
+		#t1{
+			display: flex;
+			justify-content: center;
+		}
+		.flex{display: flex;}
+		#t2{
+			width: 50%;
+			justify-content: center;
+		}
+		#t3{
+			width: 100%;
+			margin: 2px 3px;
+			height : 60px;
+			justify-content: center;
+			font-size: 50px;
+			font-weight: bold;
+		}
+		.c1{
+			width: 20%;
+			margin: 2px 3px;
+			justify-content: center;
+			font-size: 50px;
+			font-weight: bold;
+		}
+		.c2{
+			width: 60%;
+			margin: 2px 3px;
+			justify-content: center;
+			font-size: 30px;
+			font-weight: bold;
+		}
+		.c3{
+			width: 20%;
+			margin: 2px 3px;
+			justify-content: center;
+			font-size: 50px;
+			font-weight: bold;
+		}
+		.boton{
+			height:100%;
+			width:100%;
+		}
+		
+	</style>
+	
+	<body>
+		<div id="t1" class="flex">
+			<div id="t2" class="bord">
+				<div class="flex">
+					<div id="t3" class="flex bord">
+						<div>Tabla de imagenes</div>
+					</div>
+				</div>
+				<div id="line1" class="flex">
+					<div class="c1 bord">
+						<a href="https://es.wikipedia.org/wiki/C%2B%2B" target="_blank">
+							<img src="../Fotos/C++.png"width="100%"height="100%"alt=""/>
+						</a>
+					</div>
+					<div class="c2 bord">
+						<a href="https://es.wikipedia.org/wiki/C%2B%2B" target="_blank">
+							<h1 align="center">
+								C++
+							</h1>
+						</a>
+					</div>
+					<div class="flex c3 bord">
+						<input class="boton" type="button" onclick="del(1);" value="Borrar Fila"/>
+					</div>
+				</div>
+				<div id="line2" class="flex">
+					<div class="c1 bord">
+						<a href="https://es.wikipedia.org/wiki/HTML" target="_blank">
+							<img src="../Fotos/HTML.png"width="100%"height="100%"alt=""/>
+						</a>
+					</div>
+					<div class="c2 bord">
+						<a href="https://es.wikipedia.org/wiki/HTML" target="_blank">
+							<h1 align="center">
+								HTML
+							</h1>
+						</a>
+					</div>
+					<div class="flex c3 bord">
+						<input class="boton" type="button" onclick="del(2);" value="Borrar Fila"/>
+					</div>
+				</div>
+				<div id="line3" class="flex">
+					<div class="c1 bord">
+						<a href="https://es.wikipedia.org/wiki/JavaScript" target="_blank">
+							<img src="../Fotos/JavaScript.png"width="100%"height="100%"alt=""/>
+						</a>
+					</div>
+					<div class="c2 bord">
+						<a href="https://es.wikipedia.org/wiki/JavaScript" target="_blank">
+							<h1 align="center">
+								JavaScript
+							</h1>
+						</a>
+					</div>
+					<div class="flex c3 bord">
+						<input class="boton" type="button" onclick="del(3);" value="Borrar Fila"/>
+					</div>
+				</div>
+				<div id="line4" class="flex">
+					<div class="c1 bord">
+						<a href="https://es.wikipedia.org/wiki/Python" target="_blank">
+							<img src="../Fotos/Python.png"width="100%"height="100%"alt=""/>
+						</a>
+					</div>
+					<div class="c2 bord">
+						<a href="https://es.wikipedia.org/wiki/Python" target="_blank">
+							<h1 align="center">
+								Python
+							</h1>
+						</a>
+					</div>
+					<div class="flex c3 bord">
+						<input class="boton" type="button" onclick="del(4);" value="Borrar Fila"/>
+					</div>
+				</div>
+				<div id="line5" class="flex">
+					<div class="c1 bord">
+						<a href="https://es.wikipedia.org/wiki/World_Wide_Web" target="_blank">
+							<img src="../Fotos/WWW.png"width="100%"height="100%"alt=""/>
+						</a>
+					</div>
+					<div class="c2 bord">
+						<a href="https://es.wikipedia.org/wiki/World_Wide_Web" target="_blank">
+							<h1 align="center">
+								World_Wide_Web
+							</h1>
+						</a>
+					</div>
+					<div class="flex c3 bord">
+						<input class="boton" type="button" onclick="del(5);" value="Borrar Fila"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype= html>
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		
+		<style>
+			#mensaje{
+				color: #F00;
+				font-size:18px;
+				font-weight: bold;
+				width: 224px;
+				height: 30px;
+				line-height:30px;
+				background-color: #CCC;
+				text-align:center;
+			}
+
+			.alumno {
+				color:#0066cc;
+				line-height:22px;
+			}
+			
+			.maestro{
+				color:#005a1f;
+				line-height:22px;
+			}
+			.reprobado{
+				background-color:#FF0000;
+			}
+			
+			table{}
+			
+			/*
+			Estos son comentarios
+			*/
+			
+			name = "diego"
+			class = "alumno"
+		</style>
+
+		<script src="../Librerias/jquery-3.3.1.min.js"></script>
+		
+		<script>
+			/*Sintaxis jquery: 
+			Todos los objetos con la class alumno:  $('.alumnos').val();
+			El objeto con el id maestro: $('#maestro').
+			
+			Despues del punto podremos lo que requerimos conseguir, val() encuentra el valor
+			
+			De esta manera recuperamos un dato de manera mas secilla con jquery
+			
+			/////////TAREA: Duplicar tarea 3, agregar fila de eliminar y que se oculte al darle clic///////
+			
+			*/
+			function eliminaAlumnos(){
+				$('.alumno').hide();
+				//$('#mensaje').html('Tu registro fue eliminado...');
+				$('#mensaje').html('<img src="../Fotos/loader.gif" />');
+				setTimeout("$('#mensaje').html('');",5000);
+			}
+			/*
+			function eliminaMaestro(){
+				$('#maestro1').hide();
+				$('#mensaje').html('<img src="../Fotos/loader.gif" />');
+				setTimeout("$('#mensaje').html('');",5000);
+			}
+			*/
+			function eliminaMaestro(id){
+				$('#maestro'+id).hide();
+				$('#mensaje').html('<img src="../Fotos/loader.gif" />');
+				setTimeout("$('#mensaje').html('');",5000);
+			}
+			
+		</script>
+	</head>
+
+	<body>
+		<div class="alumno">Rubén Maldonado</div>
+		<div class="alumno reprobado">Aaron Jimenez</div>
+		<div class="alumno">Marisela Guzman</div>
+		<div class="maestro" id="maestro1">Patricia Lopez</div>
+		<div class="maestro" id="maestro2">Luis Casillas</div><br><br>
+		<input onclick="eliminaMaestro(2);" type="submit" value="Eliminar" /><br><br>
+		<div id="mensaje"></div>
+	</body>
+	
+</html>

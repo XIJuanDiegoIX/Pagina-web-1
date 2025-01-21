@@ -1,0 +1,201 @@
+<!doctype= html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	
+	<style>
+		#tablero{
+			max-width:			690px;
+			height:				690px;
+			/*text-align: 		center;
+			border: 			3px solid #CCCCCC;
+			background-color: 	#59250e;*/
+		}
+		.celdaA{
+			width:				80px;
+			height:				80px;
+			background-color: 	#000000;
+			border:				1px solid #000000;
+			/*margin-right:		5px; crea un espaciado a la derecha*/ 
+			float:				left;
+		}
+		.celdaB{
+			width:				80px;
+			height:				80px;
+			background-color: 	#FFFFFF;
+			border:				1px solid #000000;
+			float:				left;
+		}
+	</style>
+	
+	<body>
+		<div id="tablero">
+			<div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+			</div>
+			<div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+			</div>
+			<div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+			</div>
+			<div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+			</div>
+			<div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+			</div>
+			<div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+			</div>
+			<div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+			</div>
+			<div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+				<div class="celdaA"></div>
+				<div class="celdaB"></div>
+			</div>
+		</div>
+		<!--<table border="1" width="640" height="640" align="center" bgcolor="000000">
+			<tr>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+			</tr>
+			<tr>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+			</tr>
+			<tr>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+			</tr>
+			<tr>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+			</tr>
+			<tr>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+				<td bgcolor="FFFFFF"></td>
+				<td></td>
+			</tr>
+		</table>-->
+	
+	</body>
+	
+</html>

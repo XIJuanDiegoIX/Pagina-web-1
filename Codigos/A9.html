@@ -1,0 +1,124 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<style>
+		.button{
+				color: #000000;
+				font-size:24px;
+				font-weight: bold;
+				width: 40px;
+				height: 32px;
+				line-height:28px;
+				background-color: #e7c5a6;
+				text-align:center;
+				border-radius:5px;
+				border-color: #cdb7a3;
+		}
+		.fondo{
+				color: #000000;
+				font-size:24px;
+				font-weight: bold;
+				width: 200px;
+				height: 162px;
+				line-height:28px;
+				background-color: #d4c8ba;
+				text-align:center;
+				border-radius:5px;
+				border:2px solid #000000;
+		}
+		#display{
+				color: #6a7e7c;
+				font-size:30px;
+				font-weight: bold;
+				width: 98%;
+				height: 30px;
+				line-height:30px;
+				background-color: #e7c5a6;
+				text-align:center;
+				border-radius: 5px;
+				border:2px solid #747371;
+		}
+		</style>
+		
+		<script src="../Librerias/jquery-3.3.1.min.js"></script>
+		
+		<script>
+			var a = "";
+			var b = "";
+			var res = "";
+			var ope = "";
+			function num(i){
+				switch (true){
+					case("1234567890".includes(i)):
+						$('#display').append(i);
+						a += i;
+						break;
+					case("+-/*".includes(i)):
+						b = a;
+						a = "";
+						ope = i;
+						$('#display').html('');
+						break;
+					case(i == "="):
+						if(a != "" && b != "" && ope != ""){
+							a = parseFloat(a);
+							b = parseFloat(b);
+							switch(ope){
+								case"+":
+									res = b + a;
+									break;
+								case"-":
+									res = b - a;
+									break;
+								case"*":
+									res = b * a;
+									break;
+								case"/":
+									res = b / a;
+									break;
+							}
+							$('#display').html(res);
+							a = res.toString();
+							b = "";
+							ope = "";
+						}else{
+							$('#display').html('Syntax Error');
+						}	
+						break;
+					case(i == "C"):
+						b = a = res = ope = "";
+						$('#display').html('');
+						break;
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div class="fondo">
+			<div id="display"></div>
+			<div>
+				<input onclick="num(1)" class="button" id="b01" type="button" value="1"/>
+				<input onclick="num(2)" class="button" id="b02" type="button" value="2"/>
+				<input onclick="num(3)" class="button" id="b03" type="button" value="3"/>
+				<input onclick="num('+')" class="button" id="bsuma" type="button" value="+"/><br>
+				<input onclick="num(4)" class="button" id="b04" type="button" value="4"/>
+				<input onclick="num(5)" class="button" id="b05" type="button" value="5"/>
+				<input onclick="num(6)" class="button" id="b06" type="button" value="6"/>
+				<input onclick="num('-')" class="button" id="bres" type="button" value="-"/><br>
+				<input onclick="num(7)" class="button" id="b07" type="button" value="7"/>
+				<input onclick="num(8)" class="button" id="b08" type="button" value="8"/>
+				<input onclick="num(9)" class="button" id="b09" type="button" value="9"/>
+				<input onclick="num('*')" class="button" id="bmul" type="button" value="*"/><br>
+				<input onclick="num('C')" class="button" id="clear" type="button" value="C"/>
+				<input onclick="num(0)" class="button" id="b00" type="button" value="0"/>
+				<input onclick="num('/')" class="button" id="bdiv" type="button" value="/"/>
+				<input onclick="num('=')" class="button" id="bigual" type="button" value="="/><br>
+			</div>
+		</div>
+	</body>
+	
+</html>
